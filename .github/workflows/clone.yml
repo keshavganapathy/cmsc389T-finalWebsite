@@ -1,6 +1,6 @@
-name: Clone
-on: 
-  workflow_dispatch:   
+name: clone workflow
+on:
+  workflow_dispatch:
 jobs:
   job_one:
     name: Clone
@@ -9,8 +9,8 @@ jobs:
       - name: testing
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }} 
-          username: ${{ secrets.USERNAME }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.NAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
